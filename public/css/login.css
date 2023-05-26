@@ -1,0 +1,44 @@
+/*----------------login-----------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #DDD;
+}
+
+.container {
+    width: 400px;
+    margin: 100px auto;
+    background-color: #FFF;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form {
+    display: none;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    color: #FFF;
+    background-color: #3498DB;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #2980B9;
+}

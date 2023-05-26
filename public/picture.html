@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/style.css" rel="stylesheet" />
+	<title>海贼王</title>
+</head>
+
+<body>
+<div class="con">
+	<div class="head">
+		<div class="logo">
+			<img src="./images/logo.png" alt="logo">
+			<h1>海贼王</h1>
+		</div>
+		<div style="width:250px; float:left; margin-left: 11px;">
+			<div class="scroll">
+				<span>ONE PIECE 海贼王</span>
+				<span>ONE PIECE 海贼王</span>
+				<span>ONE PIECE 海贼王</span>
+				<span>ONE PIECE 海贼王</span>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<!-- 清除浮动元素的影响-->
+		<div class="nav">
+			<ul>
+				<li><a href="home.html">首页</a></li>
+				<li><a href="brief.html">海贼王简介</a></li>
+				<li><a href="member.html">人物介绍</a>
+					<ul style="position:absolute; display:none; background-color:#000; width:100px; margin-left:-20px; padding:0px;" id="list3">
+						<li><a href="member/Luffy.html">路飞</a></li>
+						<li><a href="member/Zoro.html">索隆</a></li>
+						<li><a href="member/Nami.html">娜美</a></li>
+						<li><a href="member/Usopp.html">乌鲁索</a></li>
+						<li><a href="member/Sanji.html">山治</a></li>
+						<li><a href="member/Chopper.html">乔巴</a></li>
+						<li><a href="member/Robin.html">罗宾</a></li>
+						<li><a href="member/Franky.html">弗朗奇</a></li>
+						<li><a href="member/Brook.html">布鲁克</a></li>
+					</ul>
+				</li>
+				<li><a href="picture.html">图片欣赏</a></li>
+				<li><a href="author.html">作者</a></li>
+				<li><a href="jdzy.html">经典战役</a></li>
+				<li><a href="recommend.html">建议</a></li>
+				<li><a href="#">退出</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+  			<div class="dm"><a href="#"><img src="images/1.jpg" width="980"/></a></div>
+  			<div class="clear"></div>
+  			<div class="main">
+    			<h2> 图片欣赏</h2>
+    			<div class="zuopin_list">
+      				<ul>
+        				<li><a href="#"><img src="images/01.jpg" /></a></li>
+        				<li><a href="#"><img src="images/02.jpg" /></a></li>
+        				<li><a href="#"><img src="images/03.jpg" /></a></li>
+        				<li><a href="#"><img src="images/04.jpg" /></a></li>
+        				<li><a href="#"><img src="images/05.jpg" /></a></li>
+        				<li><a href="#"><img src="images/06.jpg" /></a></li>
+        				<li><a href="#"><img src="images/07.jpg" /></a></li>
+        				<li><a href="#"><img src="images/08.jpg" /></a></li>
+        				<li><a href="#"><img src="images/09.jpg" /></a></li>
+        				<li><a href="#"><img src="images/10.jpg" /></a></li>
+        				<li><a href="#"><img src="images/11.jpg" /></a></li>
+        				<li><a href="#"><img src="images/12.jpg" /></a></li>
+       			 		<li><a href="#"><img src="images/13.jpg" /></a></li>
+        				<li><a href="#"><img src="images/14.jpg" /></a></li>
+        				<li><a href="#"><img src="images/15.jpg" /></a></li>
+        				<li><a href="#"><img src="images/16.jpg" /></a></li>
+        				<li><a href="#"><img src="images/17.jpg" /></a></li>
+        				<li><a href="#"><img src="images/18.jpg" /></a></li>
+        				<li><a href="#"><img src="images/19.jpg" /></a></li>
+        				<li><a href="#"><img src="images/20.jpg" /></a></li>
+      				</ul>
+    			</div>
+  			</div>
+  			<div class="clear"></div>
+  			<div class="foot">
+    			<p>版权所有：海贼王</p>
+    			<p>&nbsp;</p>
+  			</div>
+  			<div class="clear"></div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/all.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.zuopin_list ul li').css('position', 'relative');
+		$('.zuopin_list ul li img').css({
+			'position': 'absolute',
+			'top': 0,
+			'left': 0,
+			'transition': 'transform 0.2s ease-in-out',
+		});
+		$('.zuopin_list ul li img').on('mouseenter', function() {
+			if ($(this).hasClass('is-animating')) {
+				return;
+			}
+			// $('.zuopin_list ul li img').removeClass('is-current');
+			// $(this).addClass('is-current');
+			$(this).addClass('is-animating');
+			$(this).closest('li').css('z-index', 1);
+			$(this).css({
+				'transform': 'scale(1.8)',
+				'z-index': 2,
+			});
+			$(this).siblings().css('transform', 'none');
+			// 在当前元素被放大时，其他元素不会因为上次的放大或缩小而产生影响，恢复到它们的默认状态。
+		}).on('mouseleave', function() {
+			var that = this;
+			// $(this).removeClass('is-current');
+			$(this).addClass('is-animating');
+			$(this).closest('li').css('z-index', 0);
+			$(this).css({
+				'transform': 'scale(1)',
+				'z-index': 1,
+			});
+			$(this).siblings().css('transform', 'none');
+			setTimeout(function() {
+				$(that).removeClass('is-animating');
+				$(that).closest('li').css('z-index', 0);
+			}, 200);
+		});
+	});
+</script>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/style.css" rel="stylesheet" />
+  <title>海贼王</title>
+</head>
+
+<style>
+  li{ margin:0px; padding:0px;}
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .box {
+    width:100%;
+    height:auto;
+    padding-bottom:20px;
+    background-color:#eee;
+    border:1px solid #ccc;
+    text-align:left;
+    box-sizing:border-box;
+  }
+
+  .box .title {
+    font-size:23px;
+    color:#333;
+    margin-bottom: 10px;
+  }
+
+  .box .content {
+    font-size:16px;
+    color:#666;
+  }
+</style>
+
+<body>
+<div class="con">
+  <div class="head">
+    <div class="logo">
+      <img src="./images/logo.png" alt="logo">
+      <h1>海贼王</h1>
+    </div>
+    <div style="width:250px; float:left; margin-left: 11px;">
+      <div class="scroll">
+        <span>ONE PIECE 海贼王</span>
+        <span>ONE PIECE 海贼王</span>
+        <span>ONE PIECE 海贼王</span>
+        <span>ONE PIECE 海贼王</span>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <!-- 清除浮动元素的影响-->
+    <div class="nav">
+      <ul>
+        <li><a href="home.html">首页</a></li>
+        <li><a href="brief.html">海贼王简介</a></li>
+        <li><a href="member.html">人物介绍</a>
+          <ul style="position:absolute; display:none; background-color:#000; width:100px; margin-left:-20px; padding:0px;" id="list3">
+            <li><a href="member/Luffy.html">路飞</a></li>
+            <li><a href="member/Zoro.html">索隆</a></li>
+            <li><a href="member/Nami.html">娜美</a></li>
+            <li><a href="member/Usopp.html">乌鲁索</a></li>
+            <li><a href="member/Sanji.html">山治</a></li>
+            <li><a href="member/Chopper.html">乔巴</a></li>
+            <li><a href="member/Robin.html">罗宾</a></li>
+            <li><a href="member/Franky.html">弗朗奇</a></li>
+            <li><a href="member/Brook.html">布鲁克</a></li>
+          </ul>
+        </li>
+        <li><a href="picture.html">图片欣赏</a></li>
+        <li><a href="author.html">作者</a></li>
+        <li><a href="jdzy.html">经典战役</a></li>
+        <li><a href="recommend.html">建议</a></li>
+        <li><a href="#">退出</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="dm"><a href="#"><img src="images/1.jpg"  width="980"/></a></div>
+  <div class="clear"></div>
+  <div>
+    <div class="container">
+      <div class="box">
+        <img src="images/zy1.jpg" width="438"height="260">
+        <div class="title">顶上战争<br>（白胡子海贼团VS海军和七武海）</div>
+        <div class="content">
+          可以说是史上最大的一场战役，海贼王前半段的序幕。为救艾斯白胡子海贼团与海军决战于马林梵多，但白胡子海贼团大败，艾斯为救路飞被赤犬杀死，白胡子更是被黑胡子海贼团杀死并夺走了震震果实的能力，最终这场战役以红发的到来结束。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy2.jpg" width="438"height="260">
+        <div class="title">司法岛战役<br>（草帽海贼团VSCP9）</div>
+        <div class="content">
+          奥哈拉的唯一幸存者也是唯一一个能读懂历史本文的妮可罗宾为了保护草帽海贼团心甘情愿将自己交给世界政府，想以自己性命拯救伙伴，路飞一行人知道后毅然决然对抗世界政府，在罗宾说出“我想活下去，请带我一起出海吧”时有多少小伙伴留下了感动的泪水，经过一番苦战最终击败CP9。这场战役可以说是经典中的经典，使草帽海贼团一战成名，所有人都变成悬赏对象，船长路飞的悬赏更是高达3亿。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy3.jpg" width="438"height="260">
+        <div class="title">幽灵岛战役<br>（草帽海贼团VS月光莫利亚）</div>
+        <div class="content">
+          草帽海贼团在魔幻三角洲地带偶遇一个没有影子的骷髅（布鲁克），得知影子都被拥有影子果实的月光莫利亚夺走，莫利亚想要通过影子制造一批不怕死的僵尸军团从而当上海贼王，当然路飞是一定不会让他得逞的，经过艰难的战斗最终重创月光莫利亚，夺回失去的影子。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy4.jpg" width="438"height="260">
+        <div class="title">香波地群岛战役<br>（超新十一星VS黄猿和平主义者）</div>
+        <div class="content">
+          为了进入新世界需要为船镀膜，从各地经历重重险阻的海贼们相聚在香波地群岛，十一位悬赏过亿的海贼们组成超新十一星（极恶时代），由于路飞打了天龙人而引来海军大将黄猿，在这里黄猿狂虐超新十一星，而草帽海贼团也差点被团灭，好在得到了冥王雷利和革命军熊的帮助才幸免于难，但是草帽海贼团还是被打散了。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy5.jpg" width="438"height="260">
+        <div class="title">鱼人岛战役<br>（草帽海贼团VS新鱼人海贼团）</div>
+        <div class="content">
+          两年后重新集结的草帽海贼团向着新世界进发，第一站就是鱼人岛，在鱼人岛草帽海贼图9人对阵新鱼人海贼团10万人（路飞一个霸王色霸气干掉5万），每个人都展现出两年中修行的成果，轻易获胜，并向四皇之一的毕古麻姆宣战，打飞大妈将鱼人岛变为自己的领地。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy6.jpg" width="438"height="260">
+        <div class="title">庞克哈萨德战役<br>（草帽海贼团VS凯撒库朗）</div>
+        <div class="content">
+          庞克哈萨德为新世界的一个岛屿，也是赤犬和青雉二人的决战之地，由于二人的决斗将这里变为冰火两重天。路飞在这里与托拉法尔加罗相遇，并决定联手击败一个四皇，他们的第一个任务就是摧毁smile工厂抓获凯撒，两年后已经拥有霸气的路飞已经不惧拥有自然系的凯撒了，轻松将其击败并摧毁了smile工厂。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy7.jpg" width="438"height="260">
+        <div class="title">空岛战役<br>（草帽海贼团VS艾尼路）</div>
+        <div class="content">
+          艾尼路原空岛统治者，拥有极其强大的自然系恶魔果实响雷果实和强大的心网能力（见闻色霸气）两种能力的配合可以听到空岛内任何地方的说话，凡是有忤逆者将直接降临天雷处死。艾尼路认为无限大路（月球）才是神应该生活的地方，所以在诺亚方舟箴言完成后要摧毁整个空岛，但是遇到了身为橡胶人不导电的天敌路飞，最后被路飞用一个黄金螺旋弹打飞，拯救了空岛。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy8.jpg" width="438"height="260">
+        <div class="title">阿拉巴斯坦战役<br>（草帽海贼团VS巴洛克华克秘密犯罪组织）</div>
+        <div class="content">
+          当时的阿拉巴斯坦王国被禁药“跳舞粉”弄的三年未曾下雨，百姓民不聊生，社长克洛克达尔更是用阴谋诡计挑起内乱并想夺取古代兵器“冥王”，在路飞知晓幕后主谋后想要打败克洛克达尔，可是面对着拥有自然系的沙沙果实能力者，当时尚且不会霸气的路飞几乎无能为力，两次都差点被杀死，最终找到了克洛克达尔怕水的弱点，成功的将其打飞，而同伴们也打到了相应的干部获得了胜利。
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy9.jpg" width="438"height="260">
+        <div class="title">可可亚西村战役<br>（草帽海贼团VS鱼人海贼团）</div>
+        <div class="content">
+          这场战役是草帽海贼团进入伟大的航路前最大的一场战役。我们的女主角娜美从小生活的可可亚西村遭到了鱼人海贼团阿龙的占领，并且残忍的杀害了娜美的母亲，年幼的娜美为了保护村子与阿龙定下协议攒够1个亿就放过她们。在娜美遇到路飞并且“背叛”路飞后带着1个亿到阿龙那里后，阿龙却奸诈的告诉娜美是骗她的，最后走投无路的娜美向路飞求助，一句“路飞，帮我”让整个草帽海贼团激起斗志，最终大败鱼人海贼团，阿龙被捕，路飞悬赏3000万，拯救了可可亚西村，娜美也真正的加入到草帽海贼团踏上伟大的航路。
+
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/zy10.jpg" width="438"height="260">
+        <div class="title">德雷斯罗萨战役<br>（草帽海贼团和罗VS堂吉诃德海贼团）</div>
+        <div class="content">
+          德雷斯罗萨现任国王堂吉诃德·多弗朗明哥通过手下“砂糖”的能力将国家的大多数人都变为玩具，失去记忆。罗威胁明哥公开辞掉七武海的职位否则将不会将凯撒交给他，没有凯撒就没办法和四皇凯多进行交易，凯多就会和明哥闹翻，而辞去七武海后又会遭到海军的讨伐，使其陷入两难，到最后明哥还是辞去了七武海，并用“鸟笼”想要将这个国家的人全部杀死，最终路飞开四档将明哥打败。
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="foot">
+      <p>版权所有：海贼王</p>
+      <p>&nbsp;</p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</body>
+</html>

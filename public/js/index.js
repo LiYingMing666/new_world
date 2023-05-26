@@ -1,0 +1,11 @@
+window.onload=function(){
+	$(".col-xs-12>.col-xs-4").eq(0).find(".btn-primary").click(function(){
+		window.location.href='http://localhost:8080'
+	});
+	$(".col-xs-12>.col-xs-4").eq(1).find(".btn-primary").click(function(){
+		window.location.href='http://localhost:8080/?del-view'
+	});
+	$(".col-xs-12>.col-xs-4").eq(2).find(".btn-primary").click(function(){
+		window.location.href='http://localhost:8080/?up-view'
+	});
+};

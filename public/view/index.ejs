@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>管理员</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script src="../js/jquery.v1.9-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-xs-4">
+				<div class="url">
+					<div class="col-xs-12">
+						<div class="col-xs-4"><button class="btn-primary">添加</button></div>
+						<div class="col-xs-4"><button class="btn-primary">删除</button></div>
+						<div class="col-xs-4"><button class="btn-primary">修改</button></div>
+					</div>
+				</div>
+				<div class="control">
+					<% if(path==="/"){ %>
+						<form action="http://localhost:8080/add" method="get" role="form">
+							<div class="form-group">
+								<label>id：</label>
+								<input type="text" name="id" placeholder="请输入用户id" class ="form-control"/>
+								<br>
+								<label>账号：</label>
+								<input type="text" name="username" placeholder="请输入账号" class ="form-control"/>
+								<br>
+								<label>密码：</label>
+								<input type="text" name="password" placeholder="请输入密码" class ="form-control"/>
+								<br>
+								<label>邮箱：</label>
+								<input type="text" name="email" placeholder="请输入邮箱" class ="form-control"/>
+								<br>
+								<input type="submit" value="添加" class ="form-control"/>
+							</div>
+						</form>
+					<% }else if(path==="/?del-view"){ %>
+						<form action="http://localhost:8080/del" method="get" role="form">
+							<div class="form-group">
+								<label>ID号：</label>
+								<input type="text" name="id" placeholder="请输入ID号" class ="form-control"/>
+								<br>
+								<input type="submit" value="删除" class ="form-control"/>
+							</div>
+						</form>
+					<% }else if(path==="/?up-view"){ %>
+						<form action="http://localhost:8080/up" method="get" role="form">
+							<div class="form-group">
+								<label>选择要修改ID号：</label>
+								<input type="text" name="id" placeholder="请输入id" class ="form-control"/>
+								<br>
+								<h4>需要修改的信息(不修改的可以不填)：</h4>
+								<label>账号：</label>
+								<input type="text" name="username" placeholder="请输入账号" class ="form-control"/>
+								<br>
+								<label>密码：</label>
+								<input type="text" name="password" placeholder="请输入密码" class ="form-control"/>
+								<br>
+								<input type="submit" value="修改" class ="form-control"/>
+							</div>
+						</form>
+					<% } %>
+				</div>
+			</div>
+			
+			<div class="col-xs-8">
+				<div class="table-responsive">
+				  	<table class="table table-striped">
+					    <caption>用户信息表</caption>
+					    <thead>
+					      <tr>
+					        <th>编号</th>
+					        <th>账号</th>
+					        <th>密码</th>
+							<th>管理员</th>
+							<th>邮箱<th>
+					      </tr>
+					    </thead>
+					    <tbody>
+							<% for(var i=0;i<data.length;i++){ %>
+								<%-
+									"<tr>"+
+									  "<td>"+data[i].id+"</td>"+
+									  "<td>"+data[i].username+"</td>"+
+									  "<td>"+data[i].password+"</td>"+
+									  "<td>"+data[i].isAdmin+"</td>"+
+									  "<td>"+data[i].email+"</td>"+
+									"</tr>"
+								%>
+							<% } %>
+					    </tbody>
+				  	</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

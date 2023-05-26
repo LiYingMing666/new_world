@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My App</title>
+    <meta charset="UTF-8">
+    <link href="css/login.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+    <div id="login-nav" class="auth-nav">
+        <a id="to-login" href="#">登录</a>
+        <span>|</span>
+        <a id="to-register" href="#">注册</a>
+    </div>
+    <form id="login-form" class="auth-form">
+        <h2>登录进入新世界</h2>
+        <input type="text" id="username-input" placeholder="请输入您的账号" required>
+        <input type="password" id="password-input" placeholder="请输入您的密码" required>
+        <select id="isAdmin-input" required>
+            <option value="">请选择用户类型</option>
+            <option value="0">普通用户</option>
+            <option value="1">管理员</option>
+        </select>
+        <button type="submit">登录</button>
+        <!-- 注意：0代表普通用户，1代表管理员 -->
+    </form>
+    <form id="register-form" class="auth-form">
+        <h2>创建属于你自己的账号</h2>
+        <input type="text" id="new-username-input" placeholder="请设置您的账号" required>
+        <input type="email" id="email-input" placeholder="请设置您的邮箱地址" required>
+        <input type="password" id="new-password-input" placeholder="请设置您的密码" required>
+        <button type="submit">注册</button>
+    </form>
+</div>
+</body>
+<div class="clear"></div>
+<div class="foot">
+    <p>版权所有：海贼王</p>
+    <p>&nbsp;</p>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="app.js"></script>
+<script src="js/all.js"></script>
+
+</html>

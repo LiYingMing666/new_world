@@ -1,0 +1,381 @@
+/*----------------------common-------------------------*/
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Microsoft YaHei;
+	text-align: center;
+}
+/*
+margin: 0; 设置元素外边距为0，即不留空白间隔。
+padding: 0; 设置元素内边距为0，即不留空白区域。
+font-family: Microsoft Yahei; 设置网页中所有文本使用微软雅黑字体。
+text-align: center; 设置所有元素的文本水平居中对齐。
+*/
+.clear{ clear:both;}
+/*可以在元素中使用该类清除元素旁边的所有浮动（float）对该元素的影响。*/
+.fl{
+	text-align: center;
+	position: relative;
+}
+/*可以在元素中使用该类将该元素横向居中排列，并将该元素相对定位（relative）。*/
+.fr{ float:right;}
+/*可以在元素中使用该类将该元素在右侧浮动。*/
+img{ border:none;}
+/*定义了所有图片元素的默认样式，不显示边框*/
+.p5{ padding:5px;}
+/*可以在元素中使用该类将该元素的内边距设置为5像素，创建一定的内部空白*/
+a{ text-decoration:none;}
+/*设置所有超链接的下划线为不显示，即不带下划线。*/
+a:hover{ text-decoration:underline;}
+/*当鼠标悬停在超链接上时，设置超链接下划线显示，即带下划线。*/
+li{ list-style-type:none;}
+/*设置所有列表元素（例如ul、ol等）去掉默认的符号，即不显示列表符号。*/
+.ofh{overflow:hidden;}
+/*定义了一个名为ofh的样式类，表示控制内容超出父元素的边界时隐藏超出部分，不显示溢出内容。*/
+.center{ text-align:center;}
+/*定义了名为center的样式类，可以使其元素中的文本内容居中对齐。*/
+.em{ text-indent:2em;}
+/*定义名为em的样式类，将样式元素中的文本第一行进行缩进，缩进值为2em(两个字符距离)。*/
+body{ background:url(../images/bj.jpg) no-repeat fixed top center;}
+/*设置了body元素的背景图像，使用了相对路径，即该图像位于images文件夹中。同时还设置了固定背景图，不滚动显示，并且居中排列。*/
+video {
+	width: 100%;
+	height: auto;
+	max-width: 800px; /* 设置最大宽度为800px */
+	max-height: 600px; /* 设置最大高度为600px */
+}
+/*----------------------con-------------------------*/
+.con{ width:960px;
+	padding:20px;
+	height:auto;
+	margin:10px auto;
+	background:#fff;
+	background-color:rgba(255,255,255,0.8);
+	border-radius:10px;}
+/*宽度为960像素；
+上下内边距为20像素，左右内边距为0；
+高度自适应；
+页面顶部和盒子左右两侧横向距离为10像素，居中显示；
+背景色为白色，设置了半透明度（即颜色的alpha值为0.8），使得页面背景透过来的图像能够略微显示出来；
+使用了CSS3新增的语法，设置了盒子的圆角效果，实现了较好的UI效果。
+以上这些样式定义让“con”类的元素呈现出一个圆角、有内边距、位于页面中央的白色盒子样式。用来设置网页中的主要内容区域。
+*/
+/*网站主体的大盒子*/
+
+/*----------------head-----------------*/
+.head{ width:960px; height:auto; margin:auto;}
+/*设置头部元素的宽度为960像素，高度自适应，左右居中对齐。*/
+
+.logo{
+	width: 300px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+/*定义一个名为logo的CSS样式，设置logo元素的宽度为550像素，高度为60像素。*/
+
+.logo img {
+	width: 50%;
+	height: 60px;
+}
+
+.logo h1 {
+	font-size: 25px;
+	line-height: 60px;
+	color: #000;
+	font-family: sans-serif;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+/*设置logo元素内的文字样式，字号为36像素，文字垂直居中显示，颜色为黑色，字体为“黑体”。*/
+/*将文本行高设置为与logo元素高度相同的60像素。这样可以达到垂直居中文本的效果。*/
+
+.scroll {
+	width: 100%;
+	white-space: nowrap; /* 禁止文字换行 */
+	overflow: hidden; /*overflow属性隐藏滚动文字溢出的部分 */
+}
+
+.scroll span {
+	display: inline-block;
+	/*将一个元素设置为行内块级元素，也即将元素显示为一个矩形框，并且不会换行。*/
+	padding-right: 20px; /* 设置文字之间的间距 */
+	animation: marquee 5s linear infinite;
+	/*动画的持续时间为5秒，执行方式为线性无限循环。*/
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+		/*表示文本水平位置的初始值*/
+	}
+	100% {
+		transform: translateX(-100%);
+		/*将文本水平位置向左平移，实现滚动效果*/
+	}
+}
+/*为了实现水平（左右）滚动效果，需要设置父容器（.scroll）的 overflow 属性为 hidden，
+子元素（.scroll span）的 display 属性为 inline-block，
+还需要使用 CSS3 动画属性，其中 animation-duration 指定了动画持续时间，
+animation-timing-function 指定了动画方式，
+animation-iteration-count 指定了动画播放次数等。*/
+
+
+.nav{
+	width: 960px;
+	height: 40px;
+	margin: 5px auto;
+	background-color: #000;
+	border-radius: 5px;
+}
+/*定义一个名为nav的CSS样式，设置导航栏的宽度为960像素，高度为40像素，上下、左右居中对齐，背景为黑色，设置了5像素的圆角。*/
+/*将元素的上下外边距都设置为5像素，左右外边距则自动居中对齐。这里的“auto”值表示让浏览器自动计算左右外边距的大小，以实现居中对齐的效果。注意，这里仅限于块级元素。对于行内元素，只有左右外边距才能被设置。*/
+.nav ul{
+	padding-left: 10px;
+}
+/*去除nav中ul元素的默认外边距，并设置内边距为10像素。*/
+.nav li{ float:left; padding:5px 20px; }
+/*设置li元素左浮动，同时内边距为5像素左右，20像素上下。*/
+.nav li a{
+	font-size: 20px;
+	line-height: 30px;
+	color: #fff;
+}
+/*设置导航栏中链接的样式，文本字号为20像素，行高为30像素，颜色为白色。*/
+.nav li a:hover{ color:#fff;text-decoration:none;}
+/*设置鼠标悬停到导航栏链接上时的样式，文本颜色不变，取消下划线。*/
+.nav li:hover{ background-color:#600}
+.nav li:hover a{ color:#fff;}
+/*设置鼠标悬停到导航栏li元素上时的样式，背景色变为深灰色。*/
+/*设置鼠标悬停到导航栏li元素上时，文本颜色变为白色。*/
+
+/*轮播图样式*/
+.lunbo{
+	width:960px;
+	height:350px;
+	margin:5px auto;
+	/*外边距指定了上下左右都为5px*/
+	/*auto 让浏览器自动计算水平方向的外边距，以使该容器在其父元素中水平居中。*/
+	overflow:hidden;
+	border-radius:5px;
+	position: relative;
+	/*相对定位*/
+}
+
+.img-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.img-container a {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/*使图片布满整个父容器*/
+	opacity: 0;
+	/*透明度设置为0*/
+	transition: opacity 0.6s ease-in-out;
+	/*实现元素相关属性平滑过渡效果*/
+
+}
+.img-container a.active {
+	opacity: 1;
+}
+/*当前显示的图片链接元素，其透明度应该为1。*/
+/*链接元素的透明度被设置为全不透明状态。*/
+
+.dots-container {
+	position: absolute;
+	left: 50%;
+	/*将容器应用到父元素的水平中心位置*/
+	bottom: 10px;
+	transform: translateX(-50%);
+	/*把该容器向左移动50%的宽度，使其在水平方向上居中显示*/
+}
+
+.dot {
+	display: inline-block;
+	/*该元素设置为行内块元素，方便与其他点状元素在同一行显示。*/
+	width: 12px;
+	height: 12px;
+	margin: 0 10px;
+	/*该元素左右的外边距是10像素，用来与其他圆点元素进行间隔设置。*/
+	border-radius: 50%;
+	/*将该元素设置为圆形*/
+	background: #999;
+	/*将该元素设置为灰色背景*/
+	cursor: pointer;
+	/*将鼠标光标设置为手型指针*/
+}
+.dot.active {
+	background: #fff;
+}
+/*用于表示当前正在显示的圆点元素。当该类样式被应用于某个圆点元素时，该圆点元素的背景色将变为白色，以与其他圆点元素进行区分，提高用户交互体验。*/
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	/*将该元素的顶部位置向上偏移自身高度的一半，以使其完全居中显示。*/
+	width: 30px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+.prev:hover, .next:hover {
+	opacity: 1;
+}
+.prev {
+	left: 10px;
+}
+.next {
+	right: 10px;
+}
+
+.dm{ width:960px;
+	margin:5px auto;
+	overflow:hidden;
+	border-radius:5px;
+}
+/*设置一个名为"dm"的元素样式，用来包裹轮播图下的文本内容，样式和轮播图相同。*/
+
+/*----------------main-----------------*/
+.main{ width:960px;
+	height:auto;
+	margin:10px auto;
+	font-size:14px;
+	line-height:24px;
+	color:#555;}
+/*定义一个宽度为960像素、高度自适应、上下外边距为10像素、字体大小为14像素、行高为24像素、字体颜色为灰色的元素。*/
+.main h2{
+	font-size: 18px;
+	line-height: 46px;
+	color: #333;
+	text-align: center;
+}
+.main h2 a{font-size:18px; line-height:46px; color:#333;}
+.main p{font-size:14px; line-height:24px; color:#555; text-indent:2em;}/*text-indent首行缩进2个字母。*/
+
+
+.main_list{ width:960px; height:auto; }
+.main_list li{ width:150px;height:100px; float:left; margin:3px; border:2px solid #fff;}
+.main_list li:hover{border:2px solid #d00;}
+.main_list li img{ width:150px; height:100px; }
+/*
+定义一个宽度为960像素、高度自适应的名为"main_list"的列表元素。
+定义"main_list"列表中每个li元素的样式，宽度为150像素，高度为100像素，左右外边距为3像素，边框为2像素白色实线。
+设置鼠标悬浮到"main_list"列表中每个li元素上时的样式，边框为2像素红色实线。
+设置"main_list"列表中每个li元素包含的img图片的大小为宽150像素，高100像素。
+*/
+
+
+/* 卡片列表容器 */
+.hezhao_list{
+	width: 960px;
+	height: auto;
+}
+
+/* 每个卡片 */
+.hezhao_list li {
+	position: relative;
+	display: inline-block; /* 设置为行内块元素，使每个卡片横向排列 */
+	width: 300px; /* 设置每个卡片的宽度 */
+	height: 330px;
+	float:left; margin:8px;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	perspective: 1000px; /* 设置透视距离 */
+	transform-style: preserve-3d;
+	transition: transform 1s ; /* 添加动画过渡效果 */
+}
+
+/* 卡片正面 */
+.hezhao_list li .front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: rotateY(0);
+	transition: transform 1s; /* 添加动画过渡效果 */
+}
+
+/* 卡片背面 */
+.hezhao_list li .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background-color: rgba(255, 255, 255, 1);
+	transform: rotateY(-180deg) translateZ(10px);
+	transition: transform 1s; /* 添加动画过渡效果 */
+}
+
+/* 鼠标悬停时的样式 */
+.hezhao_list li:hover .front {
+	transform: rotateY(180deg);
+}
+
+.hezhao_list li:hover .back {
+	transform: rotateY(0);
+}
+
+/*.hezhao_list{ width:960px; height:auto; }*/
+/*.hezhao_list li{ width:300px;*/
+/*	height:330px;*/
+/*	float:left; margin:8px;*/
+/*	border:2px solid #fff;*/
+/*	border-radius:10px;*/
+/*	overflow:hidden;}*/
+/*.hezhao_list li:hover{border:2px solid #600;}*/
+/*.hezhao_list li img{ width:300px;}*/
+/*定义一个宽度为960像素、高度自适应的名为"hezhao_list"的列表元素。*/
+/*定义"hezhao_list"列表中每个li元素的样式，宽度为300像素，高度为330像素，左右外边距为8像素，边框为2像素白色实线，圆角为10像素，超出内容部分隐藏。*/
+/*设置鼠标悬浮到"hezhao_list"列表中每个li元素上时的样式，边框为2像素深灰色实线。*/
+/*设置"hezhao_list"列表中每个li元素包含的img图片的宽度为300像素，高度自适应。*/
+
+.zuopin_list{ width:960px; height:auto; }
+.zuopin_list li{
+	width:180px;
+	height:120px;
+	float:left;
+	margin:3px;
+	border:2px solid #fff;}
+.zuopin_list li:hover{border:2px solid #100;}
+.zuopin_list li img{ width:180px; height:120px; }
+/*定义一个宽度为960像素、高度自适应的名为"zuopin_list"的列表元素。*/
+/*定义"zuopin_list"列表中每个li元素的样式，宽度为180像素，高度为120像素，左右外边距为3像素，边框为2像素白色实线。*/
+/*设置鼠标悬浮到"zuopin_list"列表中每个li元素上时的样式，边框为2像素深绿色实线。*/
+/*设置"zuopin_list"列表中每个li元素包含的img图片的大小为宽度180像素，高度120像素。*/
+
+/*----------------foot-----------------*/
+.foot{ width:960px;
+	height:50px;
+	margin:10px auto;
+	padding-top:10px;
+	border-top:3px solid #100;
+	text-align:center;
+	font-size:14px;
+	line-height:24px;
+	color:#666;}
+/*定义一个宽度为960像素，高度为50像素，上下外边距为10像素，上内边距为10像素，上边框为3像素深绿色实线，居中显示，字体大小为14像素，行高为24像素，字体颜色为深灰色的元素。*/
+.foot{font-size:14px; line-height:24px; color:#666;}
+/*设置"foot"元素下所有文本的字体大小为14像素，行高为24像素，字体颜色为深灰色。*/
+
